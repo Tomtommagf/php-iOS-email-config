@@ -3,66 +3,25 @@
 <plist version="1.0">
 <dict>
     <key>ConsentText</key>
-    <dict>
-        <key>default</key>
-        <string>This is an always removable iOS profile for configuring your e-mail account.</</string>
-    </dict>
-    <key>PayloadContent</key>
-    <array>
-        <dict>
-            <key>EmailAccountDescription</key>
-            <string>Example Mail</string>
-            <key>EmailAccountName</key>
-            <string>DISPLAYNAME</string>
-            <key>EmailAccountType</key>
-            <string>EmailTypeIMAP</string>
-            <key>EmailAddress</key>
-            <string>MAILADDR</string>
-            <key>IncomingMailServerAuthentication</key>
-            <string>EmailAuthPassword</string>
-            <key>IncomingMailServerHostName</key>
-            <string>imap.example.com</string>
-            <key>IncomingMailServerPortNumber</key>
-            <integer>993</integer>
-            <key>IncomingMailServerUseSSL</key>
-            <true/>
-            <key>IncomingMailServerUsername</key>
-            <string>MAILADDR</string>
-            <key>OutgoingMailServerAuthentication</key>
-            <string>EmailAuthPassword</string>
-            <key>OutgoingMailServerHostName</key>
-            <string>smtp.example.com</string>
-            <key>OutgoingMailServerPortNumber</key>
-            <integer>465</integer>
-            <key>OutgoingMailServerUseSSL</key>
-            <true/>
-            <key>OutgoingMailServerUsername</key>
-            <string>MAILADDR</string>
-            <key>OutgoingPasswordSameAsIncomingPassword</key>
-            <true/>
-            <key>PayloadDescription</key>
-            <string>Configures email account.</string>
-            <key>PayloadDisplayName</key>
-            <string>Example</string>
-            <key>PayloadIdentifier</key>
-            <string>com.example.profile.email1</string>
-            <key>PayloadOrganization</key>
-            <string>Example Mail</string>
-            <key>PayloadType</key>
-            <string>com.apple.mail.managed</string>
-            <key>PayloadUUID</key>
-            <string>81F9DCED-366F-4509-9E6B-9F7B0D69A158</string>
-            <key>PayloadVersion</key>
-            <integer>1</integer>
-            <key>PreventAppSheet</key>
-            <false/>
-            <key>PreventMove</key>
-            <false/>
-            <key>SMIMEEnabled</key>
-            <false/>
-            <key>disableMailRecentsSyncing</key>
-            <false/>
-        </dict>
+	<dict>
+            <key>default</key>
+		<string>The really cool thing about mobile profiles is that once they've been verified and installed by the system, they strictly follow the criteria set, meaning if you strip the profile of it's automatic removal date, these settings can be applied indefinitely. You may also be wondering about a profiles expiration date, and the short answer is that it simply does not matter; the reason that Apple signed profiles contain an automatic removal action (either by time interval after the initial install or a specific date) is because without it, profiles will stay installed regardless of it being signed. Beyond popular belief, the certificate within the profile is only responsible for the initial installation, nothing else. The most obvious application for this in my opinion is the potential to write defaults while Jailbroken, and carrying them out through different iOS versions, Jailbroken or not.</string>
+	</dict>
+	<key>PayloadContent</key>
+	<array>
+	    <dict>
+		<key>PayloadContent</key>
+		    <array>
+			<dict>
+			    <key>DefaultsData</key>
+				<dict>
+				    <key>AccessoryDeveloperEnabled</key>
+					<true/>
+				</dict>
+				    <key>DefaultsDomainName</key>
+					<string>.GlobalPreferences</string>
+			</dict>
+		    </array>
     </array>
     <key>PayloadDescription</key>
     <string>This profile was provided by Example Mail for configuring your emails on your iOS devices (e.g. iPhone & iPad)</string>
